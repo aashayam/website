@@ -19,7 +19,24 @@
 		.activediv > a{
 			color: #ffffff;
 		}
+		#map {
+			height: 400px;
+			width: 100%;
+		}
 	</style>
+	<script>
+      function initMap() {
+        const uluru = { lat: -25.344, lng: 131.036 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
   </head>
   <body style="background-color: #f1f1f1;">
   <table style="text-align:center;" align="center">
@@ -34,7 +51,7 @@
 	</tr>
   </table>
   <div class="row" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; margin-right:0px;">
-     <div class="col-4 col-md-2 activediv" style="border:1px; text-align:center;">
+     <div class="col-4 col-md-2" style="background-color:#ffeeff; border:1px; text-align:center;">
        <a href="index.html">Home</a>
      </div>
      <div class="col-4 col-md-2" style="background-color:#ffeeee; border:1px; text-align:center;">
@@ -46,7 +63,7 @@
      <div class="col-4 col-md-2" style="background-color:#deeeff; border:1px; text-align:center;">
        <a href="products.html">Our Products</a>
      </div>
-     <div class="col-4 col-md-2" style="background-color:#eeeeff; border:1px; text-align:center;">
+     <div class="col-4 col-md-2 activediv" style="background-color:#eeeeff; border:1px; text-align:center;">
        <a href="contactus.html">Contact Us</a>
      </div>
      <div class="col-4 col-md-2" style="background-color:#ffeeee; border:1px; text-align:center;">
@@ -55,49 +72,15 @@
    </div>
    <br />
    <div class="container">
-	<table class="table table-bordered">
-	<tr>
-		<th colspan=2 class="text-success">
-		SCHOOL FOR MENTALLY CHALLENGED<br />
-		A VOCATIONAL CENTRE
-		</th>
-	</tr>
-	<tr>
-		<th>
-			VOCATIONAL ASSESSMENT
-		</th>
-		<th>
-			COMMUNITY ASSESSMENT
-		</th>
-	</tr>
-	<tr>
-	<td>
-		<ul>
-		<li>Trainee Assessment</li>
-		<li>Generic Skill Assessment</li>
-		<li>Readiness skills</li>
-		<li>Personal</li>
-		<li>Communication</li>
-		<li>Social behaviour</li>
-		<li>Functional academics</li>
-		<li>Safety</li>
-		<li>Domestic</li>
-		<li>Mobility & hand functioning</li>
-		<li>Occupational</li>
-		</ul>
-	</td>
-	<td>
-		<ul>
-		<li>Job Identification</li>
-		<li>Specific Skill</li>
-		<li>Job Placement</li>
-		<li>Job Analysis</li>
-		<li>Job Related Skills and Work Behaviour Training <br />(in Simulated and Actual Job Setting)</li>
-		<li>Job Placement</li>
-		<li>Sheltered Employment</li>
-		</ul>
-	</td>
-	</tr>
+	   <table class="table table-bordered">
+	<tr><th>Contact</th></tr>
+	<tr><td>
+	</td></tr>
+	<tr><td>
+	<div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhQZY0C6HZ1k4egJ3atEFE53FVpsjJ0fQ&callback=initMap&libraries=&v=weekly" async ></script>	
+	</td></tr>
 	</table>
    </div>
   </body>
