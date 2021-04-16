@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: aashayam.org.in
+Token: efbb46cd7c5f3a6cf20b348f1d8253bfd088f4575caa823a99fa247244fe05f8
